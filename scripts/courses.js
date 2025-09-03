@@ -79,10 +79,12 @@ const courses = [
 ];
 
 const coursesElement = document.getElementById("courses");
+const creditsElement = document.getElementById("course-credits");
 
 function displayCourses(filter, strict) {
 	coursesElement.innerHTML = "";
 
+	let credits = 0;
 	courses.filter((course) => {
 		for(const key in filter) {
 			if(key in course) {
@@ -99,7 +101,11 @@ function displayCourses(filter, strict) {
 		if(course.completed)
 			courseSpan.classList.add("completed");
 		coursesElement.append(courseSpan);
-	})
+
+		credits += course.credits;
+	});
+
+	creditsElement.innerText = credits;
 }
 
 document.getElementById("courses-btn-all").addEventListener("click", (e) => displayCourses());
