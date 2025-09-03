@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>WDD 231 Course Page</title>
+	<meta name="description" content="WDD 231; Sam Anguiano; Course Home Page">
+	<meta name="author" content="Sam Anguiano">
+	<link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="WDD 231">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+	<link rel="stylesheet" type="text/css" href="styles/smaller.css">
+	<link rel="stylesheet" type="text/css" href="styles/larger.css">
+	<script defer src="scripts/getdates.js"></script>
+	<script defer src="scripts/menu.js"></script>
+	<script defer src="scripts/courses.js"></script>
+</head>
+<body>
+	<header>
+		<img src="images/logo.svg" alt="site logo" width="24" height="24">
+		<span>Sam Anguiano</span>
+		<button id="nav-btn" class="hamburger" aria-label="navigation"></button>
+	</header>
+	<nav id="nav-bar" class="navigation">
+		<ul>
+		  <li class="current"><a href="#">Home</a></li>
+		  <li><a href="#">Chamber</a></li>
+		  <li><a href="#">Final</a></li>
+		</ul>
+	</nav>
+	<main>
+		<h1>Home</h1>
+		<section id="about-me">
+			<h2>About Me</h2>
+			<p>Hi, I'm Sam Anguiano. I'm from up in Washington state and I've always enjoyed logic and problem-solving. Programming and math have been big parts of my life for as long as I can remember, partly because I've always enjoyed them, and partly because I grew up in a very nerdy family. My dad works in software, so I started learning to code relatively soon, and since then I've had the chance to experiment with a variety of languages and projects. Along the way, I've built my own website, helped on a project developing a game based on a webcomic I enjoyed, and even had an app published on the Apple App Store for a time.</p>
+			<p>I love projects that let me learn or solve tricky problems. Whether that's solving interesting math, debugging stubborn code, or looking for creative and clever solutions. I've done some fun projects including ones I've mentioned above, a C program that generates high quality aerial maps of Minecraft worlds (quickly and efficiently, which is no mean feat as it turns out), and creating a website to host the 3rd party tabletop rpg content I've written.</p>
+			<p>Outside of programming, I enjoy solving interesting math, playing table-top rpgs with friends, playing a handful of games (Minecraft and World of Warcraft seem to be my "go to"s these days), reading novels, and watching some animes.</p>
+		</section>
+		<section id="photo">
+			<h2>Student Photo</h2>
+			<img loading="lazy" src="images/profile.jpg" width="400" height="600" alt="Portrait of Sam Anguiano.">
+		</section>
+		<section id="courses-section">
+			<h2>Web Certificate Courses</h2>
+			<div id="course-btns">
+				<button id="courses-btn-all">All</button>
+				<button id="courses-btn-wdd">WDD</button>
+				<button id="courses-btn-cse">CSE</button>
+			</div>
+			<div id="courses"></div>
+		</section>
+	</main>
+	<div id="spacer"></div>
+	<footer>
+		<div class="social">
+			<a href="https://github.com/SamAng219255/" target="_blank"><img src="images/github.svg" alt="github" width="44" height="44"></a>
+			<a href="https://www.linkedin.com/in/samang219255" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="44" height="44"></a>
+			<a href="https://www.facebook.com/sam.anguiano.58" target="_blank"><img src="images/facebook.svg" alt="facebook" width="44" height="44"></a>
+		</div>
+		<p>&copy;<span id="currentyear"></span> ⚛ Paul "Sam" Anguiano ⚛ Washington, USA</p>
+		<p id="lastModified"></p>
+	</footer>
+</body>
+</html>

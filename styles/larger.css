@@ -1,0 +1,54 @@
+@media only screen and (min-width: 700px) {
+	header {
+		grid-template-columns: 32px auto;
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+	.navigation {
+		display: block;
+		border-bottom: solid 1px var(--black);
+	}
+	.navigation ul {
+		display: flex;
+	}
+	.navigation a {
+		border: none;
+	}
+
+	main {
+		grid-template-columns: 2fr 1fr;
+	}
+	h1 {
+		grid-column: 1/3;
+	}
+
+	#about-me {
+		grid-column: 1/2;
+	}
+
+	#photo {
+		grid-column: 2/3;
+	}
+	#photo img {
+		box-sizing: border-box;
+		max-width: 100%;
+		margin: 0;
+	}
+
+	#courses-section {
+		grid-column: 1/3;
+	}
+	#courses {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.social {
+		justify-content: unset;
+		width: fit-content;
+		margin: auto;
+	}
+}
