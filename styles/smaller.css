@@ -1,5 +1,5 @@
 :root {
-	font-family: helvetica, arial, sans serif;
+	font-family: "Roboto", helvetica, arial, sans serif;
 	color: var(--slate);
 
 	--black: #111; /* Used for certain (usually smaller) foreground "highlight" elements, such as borders. */
