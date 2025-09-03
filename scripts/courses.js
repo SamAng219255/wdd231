@@ -84,8 +84,7 @@ const creditsElement = document.getElementById("course-credits");
 function displayCourses(filter, strict) {
 	coursesElement.innerHTML = "";
 
-	let credits = 0;
-	courses.filter((course) => {
+	const filteredCourses = courses.filter((course) => {
 		for(const key in filter) {
 			if(key in course) {
 				if(course[key] !== filter[key])
@@ -95,17 +94,16 @@ function displayCourses(filter, strict) {
 				return false;
 		}
 		return true;
-	}).forEach((course) => {
+	});
+	filteredCourses.forEach((course) => {
 		const courseSpan = document.createElement("span");
 		courseSpan.innerText = `${course.subject} ${course.number}`;
 		if(course.completed)
 			courseSpan.classList.add("completed");
 		coursesElement.append(courseSpan);
-
-		credits += course.credits;
 	});
 
-	creditsElement.innerText = credits;
+	creditsElement.innerText = filteredCourses.reduce((credits, course) => {return credits + course.credits;}, 0);
 }
 
 document.getElementById("courses-btn-all").addEventListener("click", (e) => displayCourses());
