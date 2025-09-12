@@ -1,0 +1,74 @@
+{
+  "members": [
+    {
+      "name": "Evergreen Tech Solutions",
+      "address": "1456 Innovation Way, Seattle, WA 98101",
+      "phone": "(206) 555-2187",
+      "website": "https://www.evergreentech.com",
+      "image": "member_evergreen.jpg",
+      "membership_level": 3,
+      "industry": "Software & IT Services",
+      "description": "We provide cloud-based solutions and custom enterprise software."
+    },
+    {
+      "name": "Cascade Coffee Roasters",
+      "address": "982 Market Street, Portland, OR 97205",
+      "phone": "(503) 555-6671",
+      "website": "https://www.cascadecoffee.com",
+      "image": "member_cascade.jpg",
+      "membership_level": 2,
+      "industry": "Food & Beverage",
+      "description": "We are a local coffee roaster specializing in sustainable and fair-trade blends."
+    },
+    {
+      "name": "Northwind Outfitters",
+      "address": "254 Riverbend Drive, Boise, ID 83702",
+      "phone": "(208) 555-0922",
+      "website": "https://www.northwindoutfitters.com",
+      "image": "member_northwind.jpg",
+      "membership_level": 1,
+      "industry": "Outdoor Retail",
+      "description": "We supply camping, hiking, and outdoor adventure equipment."
+    },
+    {
+      "name": "Summit Financial Advisors",
+      "address": "730 Capital Blvd, Denver, CO 80203",
+      "phone": "(720) 555-7744",
+      "website": "https://www.summitadvisors.com",
+      "image": "member_summit.jpg",
+      "membership_level": 3,
+      "industry": "Financial Services",
+      "description": "We are independent advisors offering investment and retirement planning."
+    },
+    {
+      "name": "Harborview Hospitality Group",
+      "address": "310 Bayfront Avenue, San Diego, CA 92101",
+      "phone": "(619) 555-3328",
+      "website": "https://www.harborviewhospitality.com",
+      "image": "member_harborview.jpg",
+      "membership_level": 2,
+      "industry": "Hospitality",
+      "description": "We manage boutique hotels and resorts along the West Coast."
+    },
+    {
+      "name": "Metro Creative Studio",
+      "address": "415 Main Street, Austin, TX 78701",
+      "phone": "(512) 555-1490",
+      "website": "https://www.metrocreativestudio.com",
+      "image": "member_metro.jpg",
+      "membership_level": 1,
+      "industry": "Marketing & Design",
+      "description": "We are a full-service creative agency specializing in branding and digital campaigns."
+    },
+    {
+      "name": "Prairie Health & Wellness",
+      "address": "1220 Prairie Lane, Fargo, ND 58102",
+      "phone": "(701) 555-8834",
+      "website": "https://www.prairiehealth.com",
+      "image": "member_prairie.jpg",
+      "membership_level": 2,
+      "industry": "Healthcare",
+      "description": "We offer holistic health services, wellness programs, and family medicine."
+    }
+  ]
+}

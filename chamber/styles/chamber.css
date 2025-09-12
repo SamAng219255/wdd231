@@ -1,0 +1,232 @@
+:root {
+	--sophistication: #405080;
+	--white-sand: #fffdfc;
+	--black: #0b0d10;
+	--cerulean: #2c3e80;
+	--light-grey: #ccc;
+	--dark-grey: #444;
+	--dark-blue: #2e2eff;
+
+
+	--primary-background: var(--white-sand);
+	--primary-text: var(--black);
+
+	--secondary-background: var(--sophistication);
+	--secondary-text: var(--white-sand);
+
+	--primary-border: solid 1px var(--black);
+	--secondary-border: solid 1px var(--white-sand);
+
+	--near-grey: var(--light-grey);
+	--far-grey: var(--dark-grey);
+
+	--link: #2e2eff;
+
+
+	background-color: var(--primary-background);
+	font-family: helvetica, arial, sans-serif;
+	color: var(--primary-text);
+}
+
+:root[data-theme="light"] {
+	--primary-background: var(--white-sand);
+	--primary-text: var(--black);
+
+	--secondary-background: var(--sophistication);
+	--secondary-text: var(--white-sand);
+
+	--primary-border: solid 1px var(--black);
+	--secondary-border: solid 1px var(--white-sand);
+
+	--near-grey: var(--light-grey);
+	--far-grey: var(--dark-grey);
+
+	--link: #2e2eff;
+}
+
+:root[data-theme="dark"] {
+	--primary-background: var(--black);
+	--primary-text: var(--white-sand);
+
+	--secondary-background: var(--cerulean);
+	--secondary-text: var(--white-sand);
+
+	--primary-border: solid 1px var(--white-sand);
+	--secondary-border: solid 1px var(--white-sand);
+
+	--near-grey: var(--dark-grey);
+	--far-grey: var(--light-grey);
+
+	--link: #7a97ff;
+}
+
+* {
+	transition: background-color 0.5s, color 0.5s;
+}
+
+.no-transition {
+	transition: unset;
+}
+.no-transition * {
+	transition: unset;
+}
+
+a {
+	color: var(--link);
+	background-color: var(--primary-background);
+	padding: 2px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+header {
+	background-color: var(--secondary-background);
+	color: var(--secondary-text);
+
+	display: grid;
+	grid-template-columns: 44px 1fr 44px 44px;
+	padding: 8px;
+	gap: 8px 4px;
+}
+
+header span {
+	font-size: 1.125rem;
+	align-self: end;
+	margin-bottom: 2px;
+}
+
+#light-dark-btn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: inherit;
+	padding: 0;
+	min-width: 44px;
+	text-align: center;
+}
+#light-dark-btn svg {
+	display: block;
+}
+
+.context-menu {
+	position: absolute;
+	display: block;
+	background-color: var(--primary-background);
+	color: var(--primary-text);
+	border: var(--primary-border);
+	border-radius: 6px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.75);
+	z-index: 1000;
+	overflow: hidden;
+}
+
+.context-menu button {
+	all: unset;
+	display: block;
+	width: 100%;
+	padding: 8px 12px;
+	cursor: pointer;
+}
+
+.context-menu button:hover {
+	background-color: var(--secondary-background);
+	color: var(--secondary-text);
+}
+
+#nav-btn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: inherit;
+	padding: 0;
+	min-width: 44px;
+	text-align: center;
+}
+#nav-btn .svg-hamburger {
+	display: block;
+}
+#nav-btn .svg-x {
+	display: none;
+}
+#nav-btn.show .svg-hamburger {
+	display: none;
+}
+#nav-btn.show .svg-x {
+	display: block;
+}
+
+#nav-bar {
+	display: none;
+}
+#nav-bar.show {
+	display: flex;
+	flex-direction: column;
+	grid-column: 1/5;
+}
+#nav-bar a {
+	color: inherit;
+	text-decoration: none;
+	height: 19px;
+	padding: 12px 8px;
+	border-top: var(--secondary-border);
+	background-color: unset;
+}
+#nav-bar a.current {
+	text-decoration: underline;
+}
+#nav-bar a:hover {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+main {
+	width: 900px;
+	max-width: 100vw;
+	box-sizing: border-box;
+	margin: auto;
+	padding: 8px;
+	flex-grow: 1;
+}
+
+h1 {
+	color: inherit;
+}
+
+footer {
+	background-color: var(--secondary-background);
+	color: var(--secondary-text);
+
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding: 16px;
+}
+
+#socials {
+	display: flex;
+	gap: 8px;
+}
+#socials a {
+	background-color: unset;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--primary-background: var(--black);
+		--primary-text: var(--white-sand);
+
+		--secondary-background: var(--cerulean);
+		--secondary-text: var(--white-sand);
+
+		--primary-border: solid 1px var(--white-sand);
+		--secondary-border: solid 1px var(--white-sand);
+
+		--near-grey: var(--dark-grey);
+		--far-grey: var(--light-grey);
+
+		--link: #7a97ff;
+	}
+}

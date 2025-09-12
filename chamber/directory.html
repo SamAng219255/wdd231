@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-us" class="no-transition">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Directory — Timbuktu Chmaber of Commerce</title>
+	<meta name="description" content="A directory of members of the Timbuktu Chamber of Commerce.">
+	<meta name="author" content="Sam Anguiano">
+	<link rel="icon" href="favicon.ico">
+	<meta property="og:title" content="Directory — Timbuktu Chmaber of Commerce">
+	<meta property="og:description" content="A directory of members of the Timbuktu Chamber of Commerce.">
+	<meta property="og:url" content="https://samang219255.github.io/wdd231/chamber/directory.html">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:image" content="https://samang219255.github.io/wdd231/chamber/images/facebook_banner.png">
+	<meta property="og:type" content="website">
+	<meta name="twitter:url" content="https://samang219255.github.io/wdd231/chamber/directory.html">
+	<meta name="twitter:title" content="Directory — Timbuktu Chmaber of Commerce">
+	<meta name="twitter:description" content="A directory of members of the Timbuktu Chamber of Commerce.">
+	<meta name="twitter:card" content="summary">
+	<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+	<link rel="stylesheet" type="text/css" href="styles/chamber.css">
+	<link rel="stylesheet" type="text/css" href="styles/chamber_larger.css">
+	<link rel="stylesheet" type="text/css" href="styles/directory.css">
+	<script defer src="scripts/menu.js"></script>
+	<script defer src="scripts/get_dates.js"></script>
+	<script defer src="scripts/cards.js"></script>
+</head>
+<body>
+	<header>
+		<img src="images/logo.svg" height="44" width="44" alt="Timbuktu Chamber of Commerce Logo">
+		<span>Timbuktu Chamber of Commerce</span>
+		<button id="light-dark-btn" aria-label="dark mode">
+			<svg width="44" height="44" viewBox="0 0 24 24" fill="currentColor">
+				<path d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,20 L12,4 C16.418278,4 20,7.581722 20,12 C20,16.418278 16.418278,20 12,20 Z"></path>
+			</svg>
+		</button>
+		<button id="nav-btn" aria-label="toggle navigation">
+			<svg class="svg-hamburger" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<line x1="3" y1="6" x2="21" y2="6"></line>
+				<line x1="3" y1="12" x2="21" y2="12"></line>
+				<line x1="3" y1="18" x2="21" y2="18"></line>
+			</svg>
+			<svg class="svg-x" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<line x1="18" y1="6" x2="6" y2="18"></line>
+				<line x1="6" y1="6" x2="18" y2="18"></line>
+			</svg>
+		</button>
+		<nav id="nav-bar">
+			<a href="./">Home</a>
+			<a href="./directory.html" class="current">Directory</a>
+			<a href="./join.html">Join</a>
+			<a href="./discover.html">Discover</a>
+		</nav>
+	</header>
+	<main>
+		<h1>Directory</h1>
+		<div id="display-options">
+			<button id="display-list" aria-label="change display to list">
+				<svg width="44" height="44" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+					<g fill="currentColor" stroke="none" stroke-width="0">
+						<circle cx="3" cy="6" r="2"></circle>
+						<circle cx="3" cy="12" r="2"></circle>
+						<circle cx="3" cy="18" r="2"></circle>
+					</g>
+					<g fill="none" stroke="currentColor" stroke-width="2">
+						<line x1="8" y1="6" x2="21" y2="6"></line>
+						<line x1="8" y1="12" x2="21" y2="12"></line>
+						<line x1="8" y1="18" x2="21" y2="18"></line>
+					</g>
+				</svg>
+			</button>
+			<button id="display-grid" class="active" aria-label="change display to grid">
+				<svg width="44" height="44" viewBox="0 0 9 9" fill="currentColor" stroke="none" stroke-width="0">
+					<rect x="1" y="1" width="3" height="3" rx="0.5" ry="0.5"></rect>
+					<rect x="5" y="1" width="3" height="3" rx="0.5" ry="0.5"></rect>
+					<rect x="1" y="5" width="3" height="3" rx="0.5" ry="0.5"></rect>
+					<rect x="5" y="5" width="3" height="3" rx="0.5" ry="0.5"></rect>
+				</svg>
+			</button>
+		</div>
+		<div id="cards" class="grid">
+			<div class="card placeholder">
+				<svg width="512" height="341" viewBox="0 0 512 341" fill="currentColor">
+					<rect x="0" y="0" width="512" height="341" rx="16" ry="16"></rect>
+				</svg>
+				<div class="description">████████████████████████████████████████████████████████████████</div>
+				<div class="name">████████████████████████</div>
+				<div>████████████████████████████████</div>
+				<div>(███) ███-████</div>
+				<div>████████████████████████████████</div>
+			</div>
+			<div class="card placeholder">
+				<svg width="512" height="341" viewBox="0 0 512 341" fill="currentColor">
+					<rect x="0" y="0" width="512" height="341" rx="16" ry="16"></rect>
+				</svg>
+				<div class="description">████████████████████████████████████████████████████████████████</div>
+				<div class="name">████████████████████████</div>
+				<div>████████████████████████████████</div>
+				<div>(███) ███-████</div>
+				<div>████████████████████████████████</div>
+			</div>
+			<div class="card placeholder">
+				<svg width="512" height="341" viewBox="0 0 512 341" fill="currentColor">
+					<rect x="0" y="0" width="512" height="341" rx="16" ry="16"></rect>
+				</svg>
+				<div class="description">████████████████████████████████████████████████████████████████</div>
+				<div class="name">████████████████████████</div>
+				<div>████████████████████████████████</div>
+				<div>(███) ███-████</div>
+				<div>████████████████████████████████</div>
+			</div>
+			<div class="card placeholder">
+				<svg width="512" height="341" viewBox="0 0 512 341" fill="currentColor">
+					<rect x="0" y="0" width="512" height="341" rx="16" ry="16"></rect>
+				</svg>
+				<div class="description">████████████████████████████████████████████████████████████████</div>
+				<div class="name">████████████████████████</div>
+				<div>████████████████████████████████</div>
+				<div>(███) ███-████</div>
+				<div>████████████████████████████████</div>
+			</div>
+			<div class="card placeholder">
+				<svg width="512" height="341" viewBox="0 0 512 341" fill="currentColor">
+					<rect x="0" y="0" width="512" height="341" rx="16" ry="16"></rect>
+				</svg>
+				<div class="description">████████████████████████████████████████████████████████████████</div>
+				<div class="name">████████████████████████</div>
+				<div>████████████████████████████████</div>
+				<div>(███) ███-████</div>
+				<div>████████████████████████████████</div>
+			</div>
+			<div class="card placeholder">
+				<svg width="512" height="341" viewBox="0 0 512 341" fill="currentColor">
+					<rect x="0" y="0" width="512" height="341" rx="16" ry="16"></rect>
+				</svg>
+				<div class="description">████████████████████████████████████████████████████████████████</div>
+				<div class="name">████████████████████████</div>
+				<div>████████████████████████████████</div>
+				<div>(███) ███-████</div>
+				<div>████████████████████████████████</div>
+			</div>
+			<div class="card placeholder">
+				<svg width="512" height="341" viewBox="0 0 512 341" fill="currentColor">
+					<rect x="0" y="0" width="512" height="341" rx="16" ry="16"></rect>
+				</svg>
+				<div class="description">████████████████████████████████████████████████████████████████</div>
+				<div class="name">████████████████████████</div>
+				<div>████████████████████████████████</div>
+				<div>(███) ███-████</div>
+				<div>████████████████████████████████</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div>
+			<p><b>Timbuktu Chamber of Commerce</b></p>
+			<p>10 Rue De La Paix</p>
+			<p>Timbuktu, Mail 999</p>
+			<p>info@timbuktucc.com</p>
+			<p>(223) 555-2300</p>
+		</div>
+		<div id="socials">
+			<a href="https://facebook.com" target="_blank"><img src="images/facebook.svg" alt="social media facebook"></a>
+			<a href="https://twitter.com" target="_blank"><img src="images/x.svg" alt="social media x"></a>
+			<a href="https://linkedin.com" target="_blank"><img src="images/linkedin.svg" alt="social media linkedin"></a>
+		</div>
+		<div>
+			<p>WDD231 Class Project</p>
+			<p>Sam Anguiano</p>
+			<p>&copy; <span id="currentyear"></span> Timbuktu Chamber of Commerce</p>
+			<p id="lastModified"></p>
+		</div>
+	</footer>
+</body>
+</html>
