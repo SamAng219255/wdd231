@@ -35,6 +35,13 @@ button#display-grid {
 	padding-right: 8px;
 }
 
+/*
+The CSS in this region has lots of classes and ids in it and is hard to read because the validator
+throws as errors anywhere where the CSS uses nested elements, despite them being used in the example
+for how to write the switcher between grid and list layout. As such, many separate references of `#cards.grid`,
+`#cards.list`, and `.card` are needed to specify the variable behavior.
+*/
+
 #cards {
 	grid-column: 1/3;
 }
