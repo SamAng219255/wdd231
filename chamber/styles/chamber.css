@@ -60,14 +60,17 @@
 	--link: #7a97ff;
 }
 
-* {
-	transition: background-color 0.5s, color 0.5s;
+:root, header, footer {
+	transition: background-color 0.5s;
 }
-
-.no-transition {
+:root.no-transition, .no-transition header, .no-transition footer {
 	transition: unset;
 }
-.no-transition * {
+
+span, button, p, h1, a {
+	transition: background-color 0.5s, color 0.5s;
+}
+.no-transition span, .no-transition button, .no-transition p, .no-transition h1, .no-transition a {
 	transition: unset;
 }
 
@@ -122,6 +125,10 @@ header span {
 	box-shadow: 0 2px 6px rgba(0,0,0,0.75);
 	z-index: 1000;
 	overflow: hidden;
+	transition: background-color 0.5s;
+}
+.no-transition .context-menu {
+	transition: unset;
 }
 
 .context-menu button {
