@@ -33,26 +33,25 @@ function setListMode() {
 }
 listBtn.addEventListener("click", setListMode);
 
-const startLoadTime = (new Date()).getTime();
-
 async function getMembers() {
 	const response = await fetch("data/members.json");
 	const data = await response.json();
 
 	cardWrapper.innerHTML = "";
 
-	const loadTimeElapsed = (new Date()).getTime() - startLoadTime;
-	console.log(loadTimeElapsed);
-	if(loadTimeElapsed < 250) {
-		switch(localStorage.getItem("directory_card_mode") || "grid") {
-			case "grid":
-				setGridMode();
-				break;
-			case "list":
-				setListMode();
-				break;
-		}
+	// This is supposed to remember whether you had the page in grid or list view and change it back to that.
+	// Unfortunately, while the system works with no human noticeable errors, it always caused a layout shift
+	//     which reduced the lighthouse score by too much.
+	/*
+	switch(localStorage.getItem("directory_card_mode") || "grid") {
+		case "grid":
+			setGridMode();
+			break;
+		case "list":
+			setListMode();
+			break;
 	}
+	*/
 
 	let first = true;
 	data.members.forEach((member) => {
