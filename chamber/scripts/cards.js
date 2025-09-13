@@ -33,14 +33,7 @@ function setListMode() {
 }
 listBtn.addEventListener("click", setListMode);
 
-switch(localStorage.getItem("directory_card_mode") || "grid") {
-	case "grid":
-		setGridMode();
-		break;
-	case "list":
-		setListMode();
-		break;
-}
+const startLoadTime = (new Date()).getTime();
 
 async function getMembers() {
 	const response = await fetch("data/members.json");
@@ -48,13 +41,30 @@ async function getMembers() {
 
 	cardWrapper.innerHTML = "";
 
+	const loadTimeElapsed = (new Date()).getTime() - startLoadTime;
+	console.log(loadTimeElapsed);
+	if(loadTimeElapsed < 250) {
+		switch(localStorage.getItem("directory_card_mode") || "grid") {
+			case "grid":
+				setGridMode();
+				break;
+			case "list":
+				setListMode();
+				break;
+		}
+	}
+
+	let first = true;
 	data.members.forEach((member) => {
 		const card = document.createElement("div");
 		card.classList.add("card");
 
 		const logo = document.createElement("img");
 		logo.setAttribute("alt", `logo for ${member.name}`);
-		logo.setAttribute("loading", "lazy");
+		if(first)
+			first = false;
+		else
+			logo.setAttribute("loading", "lazy");
 		logo.setAttribute("width", "512");
 		logo.setAttribute("height", "341");
 		logo.setAttribute("src", `images/${member.image}`);
