@@ -60,10 +60,9 @@ async function getMembers() {
 
 		const logo = document.createElement("img");
 		logo.setAttribute("alt", `logo for ${member.name}`);
+		logo.setAttribute("loading", first ? "eager" : "lazy");
 		if(first)
 			first = false;
-		else
-			logo.setAttribute("loading", "lazy");
 		logo.setAttribute("width", "512");
 		logo.setAttribute("height", "341");
 		logo.setAttribute("src", `images/${member.image}`);
