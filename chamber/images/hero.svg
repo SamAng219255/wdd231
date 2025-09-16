@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice">
+  <!-- Gradient Background -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#90caf9" />   <!-- light blue -->
+      <stop offset="100%" stop-color="#e0f2f1" /> <!-- pale teal -->
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="400" fill="url(#sky)" />
+  
+  <!-- Sun -->
+  <circle cx="1050" cy="80" r="50" fill="#ffeb3b" />
+
+  <!-- Buildings -->
+  <rect x="100" y="200" width="120" height="200" fill="#607d8b" />
+  <rect x="250" y="160" width="100" height="240" fill="#455a64" />
+  <rect x="380" y="180" width="140" height="220" fill="#78909c" />
+  <rect x="550" y="140" width="110" height="260" fill="#37474f" />
+  <rect x="680" y="200" width="130" height="200" fill="#546e7a" />
+  <rect x="840" y="170" width="100" height="230" fill="#90a4ae" />
+
+  <!-- Windows -->
+  <g fill="#fff">
+    <!-- Building 1 -->
+    <rect x="115" y="220" width="20" height="20" />
+    <rect x="115" y="260" width="20" height="20" />
+    <rect x="115" y="300" width="20" height="20" />
+    <rect x="115" y="340" width="20" height="20" />
+
+    <!-- Building 2 -->
+    <rect x="265" y="180" width="20" height="20" />
+    <rect x="265" y="220" width="20" height="20" />
+    <rect x="265" y="260" width="20" height="20" />
+    <rect x="265" y="300" width="20" height="20" />
+
+    <!-- Building 3 -->
+    <rect x="395" y="200" width="20" height="20" />
+    <rect x="395" y="240" width="20" height="20" />
+    <rect x="395" y="280" width="20" height="20" />
+    <rect x="395" y="320" width="20" height="20" />
+
+    <!-- Building 4 -->
+    <rect x="565" y="160" width="20" height="20" />
+    <rect x="565" y="200" width="20" height="20" />
+    <rect x="565" y="240" width="20" height="20" />
+    <rect x="565" y="280" width="20" height="20" />
+
+    <!-- Building 5 -->
+    <rect x="695" y="220" width="20" height="20" />
+    <rect x="695" y="260" width="20" height="20" />
+    <rect x="695" y="300" width="20" height="20" />
+    <rect x="695" y="340" width="20" height="20" />
+    <rect x="735" y="220" width="20" height="20" />
+    <rect x="735" y="260" width="20" height="20" />
+    <rect x="735" y="300" width="20" height="20" />
+    <rect x="735" y="340" width="20" height="20" />
+
+    <!-- Building 6 -->
+    <rect x="855" y="190" width="20" height="20" />
+    <rect x="855" y="230" width="20" height="20" />
+    <rect x="855" y="270" width="20" height="20" />
+    <rect x="855" y="310" width="20" height="20" />
+    <rect x="895" y="190" width="20" height="20" />
+    <rect x="895" y="230" width="20" height="20" />
+    <rect x="895" y="270" width="20" height="20" />
+  </g>
+</svg>
