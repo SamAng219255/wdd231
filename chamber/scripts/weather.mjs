@@ -57,19 +57,31 @@ function displayResultsWeather(data, tempElement, weatherIcon, descElement, fore
 		const temp = data.list[i].main.temp;
 
 		if(lastTemp !== undefined) {
-			if(decreasing && temp > lastTemp && dayStr !== lastDay) {
-				if(today) {
-					today = false;
-					todayMax = max;
-					todayMin = min;
+			if(decreasing && temp > lastTemp) {
+				if(dayStr !== lastDay) {
+					if(today) {
+						today = false;
+						todayMax = max;
+						todayMin = min;
+					}
+
+					addDay(dayStr, max);
+
+					decreasing = false;
+					min = Infinity;
+					max = -Infinity;
+					lastDay = dayStr;
 				}
-
-				addDay(dayStr, max);
-
-				decreasing = false;
-				min = Infinity;
-				max = -Infinity;
-				lastDay = dayStr;
+				else {
+					const day = data.list[i];
+					if(today) {
+						dayStr = "Today";
+					}
+					else {
+						const date = new Date((day.dt + data.city.timezone) * 1000);
+						dayStr = dayStrs[date.getDay()];
+					}
+				}
 			}
 			else if(!decreasing && temp < lastTemp) {
 				decreasing = true;
@@ -109,6 +121,8 @@ function displayResultsWeather(data, tempElement, weatherIcon, descElement, fore
 
 async function displayWeather(tempElement, weatherIcon, descElement, forecastElement) {
 	const data = await apiFetch('https://api.openweathermap.org/data/2.5/forecast?lat=16.77&lon=-3.01&units=imperial&appid=3783fadabe88d8f972c2238de5860967');
+
+	//console.log(window.foo = data);
 
 	displayResultsWeather(data, tempElement, weatherIcon, descElement, forecastElement);
 }
