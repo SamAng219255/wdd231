@@ -80,6 +80,7 @@ const courses = [
 
 const coursesElement = document.getElementById("courses");
 const creditsElement = document.getElementById("course-credits");
+const detailsModal = document.getElementById("course-details");
 
 function displayCourses(filter, strict) {
 	coursesElement.innerHTML = "";
@@ -96,10 +97,52 @@ function displayCourses(filter, strict) {
 		return true;
 	});
 	filteredCourses.forEach((course) => {
+		const courseString = `${course.subject} ${course.number}`;
+
 		const courseSpan = document.createElement("span");
-		courseSpan.innerText = `${course.subject} ${course.number}`;
+		courseSpan.innerText = courseString;
 		if(course.completed)
 			courseSpan.classList.add("completed");
+
+		courseSpan.addEventListener("click", (e) => {
+			detailsModal.innerHTML = "";
+
+			const courseLabel = document.createElement("div");
+			courseLabel.classList.add("course-label");
+			courseLabel.innerText = courseString;
+
+			const closeModal = document.createElement("button");
+			closeModal.innerText = "\u00D7"
+			closeModal.classList.add("close-modal");
+			closeModal.addEventListener("click", (e) => {
+				detailsModal.close();
+			});
+			courseLabel.append(closeModal);
+
+			detailsModal.append(courseLabel);
+
+			const courseDetails = document.createElement("div");
+
+			const courseTitle = document.createElement("p");
+			courseTitle.innerText = course.title;
+			courseTitle.classList.add("course-title");
+			courseDetails.append(courseTitle);
+
+			const addDetail = (contents) => {
+				const detail = document.createElement("p");
+				detail.innerText = contents;
+				courseDetails.append(detail);
+			}
+			addDetail(`${course.credits} credits`);
+			addDetail(`Certificate: ${course.certificate}`);
+			addDetail(course.description);
+			addDetail(`Technology: ${course.technology.join(", ")}`);
+
+			detailsModal.append(courseDetails);
+
+			detailsModal.showModal();
+		});
+
 		coursesElement.append(courseSpan);
 	});
 

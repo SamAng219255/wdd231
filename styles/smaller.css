@@ -6,6 +6,7 @@
 	--slate: #202330; /* Used for most foreground elements. */
 	--white: #FCFCFF; /* Used for most background elements. */
 	--mint: #82f6cf; /* Used for background "splash" highlight elements. Often juxtaposed to --white. */
+	--light-mint: #c1fbe7; /* Used for selected --mint elements. */
 	--grey: #CCC; /* Used for background highlight elements. */
 	--light-grey: #EEE; /* Used for selected background highlight elements. */
 }
@@ -162,13 +163,36 @@ h2 {
 	font-size: 1rem;
 	padding: 0.5rem;
 	border-radius: 0.5rem;
+	cursor: pointer;
+}
+#courses span:hover {
+	background-color: var(--light-grey);
 }
 #courses span.completed {
 	background-color: var(--mint);
 }
+#courses span.completed:hover {
+	background-color: var(--light-mint);
+}
 #courses span.completed::before {
 	content: "\2713";
 }
+#course-details > div {
+	padding: 0.5rem;
+}
+.course-label {
+	background-color: var(--mint);
+	text-align: center;
+	vertical-align: center;
+	align-items: center;
+	font-size: 1.5rem;
+	display: grid;
+	grid-template-columns: 1fr 44px;
+}
+.course-title {
+	font-weight: bold;
+}
+
 
 #spacer {
 	flex: 1;
@@ -189,4 +213,24 @@ footer {
 	display: flex;
 	width: 44px;
 	height: 44px;
+}
+
+dialog {
+	background-color: var(--grey);
+	box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.5);
+	border-radius: 0.5rem;
+	border: none;
+	padding: 0;
+	max-width: 600px;
+}
+.close-modal {
+	background: none;
+	border: none;
+	color: var(--slate);
+	cursor: pointer;
+	font-size: 2rem;
+	width: 44px;
+}
+dialog::backdrop {
+	background-color: rgba(0, 0, 0, 0.5);
 }

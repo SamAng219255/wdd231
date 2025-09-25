@@ -23,17 +23,17 @@ lightDarkBtn.addEventListener("click", () => {
 	localStorage.setItem("theme", currentTheme);
 });
 
-function removeContextMenu() {
-	document.querySelectorAll(".context-menu").forEach((elem) => {elem.remove()});
-}
-
 lightDarkBtn.addEventListener("contextmenu", (e) => {
 	e.preventDefault();
 
-	const contextMenu = document.createElement("div");
+	const contextMenu = document.createElement("dialog");
 	contextMenu.classList.add("context-menu");
-	contextMenu.style.top = `${e.pageY}px`;
-	contextMenu.style.right = `${document.body.offsetWidth - e.pageX}px`;
+	contextMenu.style.top = `${e.pageY - 2}px`;
+	contextMenu.style.right = `${document.body.offsetWidth - e.pageX - 2}px`;
+	contextMenu.setAttribute("closedby", "any");
+	contextMenu.addEventListener("close", (e) => {
+		contextMenu.remove();
+	});
 
 	const option1 = document.createElement("button");
 	const option2 = document.createElement("button");
@@ -43,21 +43,21 @@ lightDarkBtn.addEventListener("contextmenu", (e) => {
 		document.documentElement.removeAttribute("data-theme");
 		localStorage.removeItem("theme");
 
-		removeContextMenu();
+		contextMenu.close();
 	};
 	const lightTheme = () => {
 		currentTheme = "light";
 		document.documentElement.setAttribute("data-theme", currentTheme);
 		localStorage.setItem("theme", currentTheme);
 
-		removeContextMenu();
+		contextMenu.close();
 	};
 	const darkTheme = () => {
 		currentTheme = "dark";
 		document.documentElement.setAttribute("data-theme", currentTheme);
 		localStorage.setItem("theme", currentTheme);
 
-		removeContextMenu();
+		contextMenu.close();
 	};
 
 	if(currentTheme == "light") {
@@ -86,11 +86,7 @@ lightDarkBtn.addEventListener("contextmenu", (e) => {
 	contextMenu.append(option2);
 
 	document.body.append(contextMenu);
-
-	document.addEventListener("click", (e) => {
-		e.preventDefault();
-		removeContextMenu();
-	}, {once: true});
+	contextMenu.showModal();
 });
 
 let lastTransitionPause;
