@@ -17,6 +17,8 @@
 	--primary-border: solid 1px var(--black);
 	--secondary-border: solid 1px var(--white-sand);
 
+	--opposed-text: var(--white-sand);
+
 	--near-grey: var(--light-grey);
 	--far-grey: var(--dark-grey);
 
@@ -38,6 +40,8 @@
 	--primary-border: solid 1px var(--black);
 	--secondary-border: solid 1px var(--white-sand);
 
+	--opposed-text: var(--white-sand);
+
 	--near-grey: var(--light-grey);
 	--far-grey: var(--dark-grey);
 
@@ -53,6 +57,8 @@
 
 	--primary-border: solid 1px var(--white-sand);
 	--secondary-border: solid 1px var(--white-sand);
+
+	--opposed-text: var(--black);
 
 	--near-grey: var(--dark-grey);
 	--far-grey: var(--light-grey);
@@ -236,6 +242,8 @@ footer {
 
 		--primary-border: solid 1px var(--white-sand);
 		--secondary-border: solid 1px var(--white-sand);
+
+		--opposed-text: var(--black);
 
 		--near-grey: var(--dark-grey);
 		--far-grey: var(--light-grey);

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-us" class="no-transition">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Join — Timbuktu Chamber of Commerce</title>
+	<meta name="description" content="Come join us in the Timbuktu Chamber of Commerce! (Example page for WDD231 class.)">
+	<meta name="author" content="Sam Anguiano">
+	<link rel="icon" href="favicon.ico">
+	<meta property="og:title" content="Join — Timbuktu Chamber of Commerce">
+	<meta property="og:description" content="Come join us in the Timbuktu Chamber of Commerce! (Example page for WDD231 class.)">
+	<meta property="og:url" content="https://samang219255.github.io/wdd231/chamber/directory.html">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:image" content="https://samang219255.github.io/wdd231/chamber/images/facebook_banner.png">
+	<meta property="og:type" content="website">
+	<meta name="twitter:url" content="https://samang219255.github.io/wdd231/chamber/directory.html">
+	<meta name="twitter:title" content="Join — Timbuktu Chamber of Commerce">
+	<meta name="twitter:description" content="Come join us in the Timbuktu Chamber of Commerce! (Example page for WDD231 class.)">
+	<meta name="twitter:card" content="summary">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+	<link rel="stylesheet" type="text/css" href="styles/chamber.css">
+	<link rel="stylesheet" type="text/css" href="styles/chamber_larger.css">
+	<link rel="stylesheet" type="text/css" href="styles/join.css">
+	<script defer src="scripts/menu.js"></script>
+	<script type="module" src="scripts/get_dates.js"></script>
+	<script type="module" src="scripts/join.mjs"></script>
+</head>
+<body>
+	<header>
+		<img src="images/logo.svg" height="44" width="44" alt="Timbuktu Chamber of Commerce Logo">
+		<span>Timbuktu Chamber of Commerce</span>
+		<button id="light-dark-btn" aria-label="dark mode">
+			<svg width="44" height="44" viewBox="0 0 24 24" fill="currentColor">
+				<path d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,20 L12,4 C16.418278,4 20,7.581722 20,12 C20,16.418278 16.418278,20 12,20 Z"></path>
+			</svg>
+		</button>
+		<button id="nav-btn" aria-label="toggle navigation">
+			<svg class="svg-hamburger" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<line x1="3" y1="6" x2="21" y2="6"></line>
+				<line x1="3" y1="12" x2="21" y2="12"></line>
+				<line x1="3" y1="18" x2="21" y2="18"></line>
+			</svg>
+			<svg class="svg-x" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<line x1="18" y1="6" x2="6" y2="18"></line>
+				<line x1="6" y1="6" x2="18" y2="18"></line>
+			</svg>
+		</button>
+		<nav id="nav-bar">
+			<a href="./">Home</a>
+			<a href="./directory.html">Directory</a>
+			<a href="./join.html" class="current">Join</a>
+			<a href="./discover.html">Discover</a>
+		</nav>
+	</header>
+	<main>
+		<h1>Join Us</h1>
+		<div>
+			<section>
+				<h2>Membership Application Form</h2>
+				<form method="get" action="thankyou.html">
+					<fieldset>
+						<legend>Applicant Individual</legend>
+						<label class="required">
+							*First Name
+							<input type="text" name="fname" autocomplete="given-name" title="Required." required>
+						</label>
+						<label class="required">
+							*Last Name
+							<input type="text" name="lname" autocomplete="family-name" title="Required." required>
+						</label>
+						<label>
+							Organizational Title
+							<input type="text" name="title" autocomplete="organization-title" pattern="[a-zA-Z\- ]{7,}" title="Must be at least 7 characters and allows letters, dashes, and spaces.">
+						</label>
+						<label class="required">
+							*Email
+							<input type="email" name="email" title="Required." required placeholder="you@example.com">
+						</label>
+						<label class="required">
+							*Phone Number
+							<input type="tel" name="phone" required>
+						</label>
+					</fieldset>
+					<fieldset>
+						<legend>Applicant Organization</legend>
+						<label class="required">
+							*Organization Name
+							<input type="text" name="org-name" required>
+						</label>
+						<label>
+							Description:
+							<textarea rows="4" name="description"></textarea>
+						</label>
+					</fieldset>
+					<fieldset>
+						<legend>Membership Request</legend>
+						<label>
+							Membership Level
+							<select name="level">
+								<option>Non-Profit</option>
+								<option>Bronze</option>
+								<option>Silver</option>
+								<option>Gold</option>
+							</select>
+						</label>
+					</fieldset>
+					<input type="hidden" name="timestamp" id="timestamp">
+					<input type="submit" value="Join Us">
+				</form>
+			</section>
+			<section id="memberships">
+				<h2>Membership Levels</h2>
+				<section>
+					<h3>Non Profit Membership Level</h3>
+					<button id="np-info-btn">Learn More</button>
+				</section>
+				<section>
+					<h3>Bronze Membership Level</h3>
+					<button id="bronze-info-btn">Learn More</button>
+				</section>
+				<section>
+					<h3>Silver Membership Level</h3>
+					<button id="silver-info-btn">Learn More</button>
+				</section>
+				<section>
+					<h3>Gold Membership Level</h3>
+					<button id="gold-info-btn">Learn More</button>
+				</section>
+			</section>
+		</div>
+	</main>
+	<footer>
+		<div>
+			<p><b>Timbuktu Chamber of Commerce</b></p>
+			<p>10 Rue De La Paix</p>
+			<p>Timbuktu, Mail 999</p>
+			<p>info@timbuktucc.com</p>
+			<p>(223) 555-2300</p>
+		</div>
+		<div id="socials">
+			<a href="https://facebook.com" target="_blank">
+				<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="#fffdfc" class="bi bi-facebook" viewBox="0 0 16 16" aria-label="social media link for Facebook">
+					<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h3.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path>
+				</svg>
+			</a>
+			<a href="https://twitter.com" target="_blank">
+				<svg width="44" height="44" viewBox="0 0 1227 1227" fill="#fffdfc" xmlns="http://www.w3.org/2000/svg" aria-label="social media link for X">
+					<path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" transform="translate(13.5 0)"/>
+				</svg>
+			</a>
+			<a href="https://linkedin.com" target="_blank">
+				<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="#fffdfc" class="bi bi-linkedin" viewBox="0 0 16 16" aria-label="social media link for LinkedIn">
+					<path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"></path>
+				</svg>
+			</a>
+		</div>
+		<div>
+			<p>WDD231 Class Project</p>
+			<p>Sam Anguiano</p>
+			<p>&copy; <span id="currentyear"></span> Timbuktu Chamber of Commerce</p>
+			<p id="lastModified"></p>
+		</div>
+	</footer>
+	<dialog id="membership-info" closedby="any"></dialog>
+</body>
+</html>

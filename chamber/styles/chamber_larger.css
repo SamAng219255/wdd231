@@ -15,6 +15,10 @@
 		grid-row: 1/2;
 		justify-self: end;
 	}
+	#nav-bar.show {
+		flex-direction: row;
+		grid-column: 3/4;
+	}
 	#nav-bar a {
 		border: none;
 		height: 20px;

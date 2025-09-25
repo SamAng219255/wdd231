@@ -18,7 +18,7 @@ async function displaySpotlights(cardWrapper) {
 		card.append(name);
 
 		const level = document.createElement("span");
-		level.innerText = `${["Copper", "Silver", "Gold"][member.membership_level - 1]} Member`;
+		level.innerText = `${["Bronze", "Silver", "Gold"][member.membership_level - 1]} Member`;
 		level.classList.add("member-level");
 		card.append(level);
 
