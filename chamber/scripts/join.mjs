@@ -110,6 +110,7 @@ function triggerModal(membershipLevel) {
 	});
 	infoModal.append(membershipBenefits);
 
+	infoModal.setAttribute("closedby", "any");
 	infoModal.showModal();
 }
 
