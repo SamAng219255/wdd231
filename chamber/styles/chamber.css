@@ -5,6 +5,8 @@
 	--cerulean: #2c3e80;
 	--light-grey: #ccc;
 	--dark-grey: #444;
+	--lighter-grey: #d6d5d4;
+	--darker-grey: #28292a;
 	--dark-blue: #2e2eff;
 
 
@@ -21,6 +23,7 @@
 
 	--near-grey: var(--light-grey);
 	--far-grey: var(--dark-grey);
+	--highlight-grey: var(--lighter-grey);
 
 	--link: #2e2eff;
 
@@ -44,6 +47,7 @@
 
 	--near-grey: var(--light-grey);
 	--far-grey: var(--dark-grey);
+	--highlight-grey: var(--lighter-grey);
 
 	--link: #2e2eff;
 }
@@ -62,6 +66,7 @@
 
 	--near-grey: var(--dark-grey);
 	--far-grey: var(--light-grey);
+	--highlight-grey: var(--darker-grey);
 
 	--link: #7a97ff;
 }
@@ -247,6 +252,7 @@ footer {
 
 		--near-grey: var(--dark-grey);
 		--far-grey: var(--light-grey);
+		--highlight-grey: var(--darker-grey);
 
 		--link: #7a97ff;
 	}

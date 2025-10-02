@@ -70,7 +70,8 @@ section button {
 	cursor: pointer;
 }
 section button:hover {
-	background-color: color-mix(in srgb, var(--near-grey), var(--primary-background));
+	/* background-color: color-mix(in srgb, var(--near-grey), var(--primary-background)); Valid and universal supported, but makes the validator complain. */
+	background-color: var(--highlight-grey);
 }
 
 #poi-0 { grid-area: a; }
