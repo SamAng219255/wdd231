@@ -126,6 +126,10 @@ dd + dt {
 figure {
 	width: 100%;
 }
+figcaption {
+	display: block;
+	margin-bottom: 0.5rem;
+}
 figure img {
 	width: 100%;
 	height: auto;
