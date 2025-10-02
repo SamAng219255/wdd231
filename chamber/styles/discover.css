@@ -1,0 +1,137 @@
+main {
+	min-width: min(900px, 100vw);
+	width: 90vw;
+}
+
+#poi-cards {
+	display: grid;
+	grid-template-areas:
+		"a"
+		"c"
+		"e"
+		"g"
+		"b"
+		"d"
+		"f"
+		"h";
+	column-gap: 1rem;
+	row-gap: 2rem;
+}
+
+#welcome.hide {
+	opacity: 0;
+}
+
+section {
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 4rem;
+	box-sizing: border-box;
+}
+section.placeholder {
+	height: 384.67px;
+}
+
+section h2 {
+	text-align: center;
+}
+
+section figure, #learn-more figure {
+	padding: 1rem 2.5rem;
+	margin: auto;
+	display: block;
+	width: fit-content;
+}
+section img, #learn-more img {
+	max-width: 200px;
+	height: auto;
+	transition: filter 0.3s ease;
+}
+
+section p, #learn-more p {
+	width: fit-content;
+	margin: 1rem auto;
+}
+
+section address, #learn-more address {
+	text-align: center;
+}
+
+section button {
+	display: block;
+	margin: auto;
+	border: none;
+	border-radius: 6px;
+	background-color: var(--near-grey);
+	color: var(--primary-text);
+	font-size: inherit;
+	padding: 12px 22px;
+	cursor: pointer;
+}
+section button:hover {
+	background-color: color-mix(in srgb, var(--near-grey), var(--primary-background));
+}
+
+#poi-0 { grid-area: a; }
+#poi-1 { grid-area: b; }
+#poi-2 { grid-area: c; }
+#poi-3 { grid-area: d; }
+#poi-4 { grid-area: e; }
+#poi-5 { grid-area: f; }
+#poi-6 { grid-area: g; }
+#poi-7 { grid-area: h; }
+
+#learn-more h2 {
+	background-color: var(--mint);
+	text-align: center;
+	vertical-align: center;
+	align-items: center;
+	font-size: 1.5rem;
+	display: grid;
+	grid-template-columns: 1fr 44px;
+	margin-top: 0;
+}
+#learn-more {
+	padding: 0.5rem;
+	background-color: var(--near-grey);
+	color: var(--primary-text);
+	box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.5);
+	border-radius: 6px;
+	border: none;
+	max-width: 600px;
+}
+.close-modal {
+	background: none;
+	border: none;
+	color: var(--primary-text);
+	cursor: pointer;
+	font-size: 2rem;
+	width: 44px;
+}
+#learn-more::backdrop {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 640px) {
+	#poi-cards {
+		grid-template-areas:
+			"a b"
+			"c d"
+			"e f"
+			"g h";
+	}
+
+	section img:hover {
+		filter: brightness(1.15) contrast(1.1);
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	#poi-cards {
+		grid-template-areas:
+			"a a b"
+			"c d e"
+			"f g h";
+	}
+}

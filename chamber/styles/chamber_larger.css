@@ -35,4 +35,8 @@
 		flex-direction: row;
 		justify-content: space-evenly;
 	}
+
+	#socials a {
+		height: 44px;
+	}
 }
