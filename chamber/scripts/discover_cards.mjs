@@ -1,15 +1,24 @@
 const cardsWrapper = document.getElementById("poi-cards");
 const learnMoreModal = document.getElementById("learn-more");
 
+function isElementInViewport(el) {
+	var rect = el.getBoundingClientRect();
+
+	return (
+		rect.bottom >= 0 &&
+		rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+	);
+}
+
 async function getPOIs() {
 	const response = await fetch("data/poi.json");
 	const data = await response.json();
 
-	cardsWrapper.innerHTML = "";
-
-	let first = true;
 	let ind = 0;
 	data.points_of_interest.forEach((poi) => {
+		const placeholder = document.getElementById(`poi-${ind}`);
+		const startsInView = isElementInViewport(placeholder);
+
 		const card = document.createElement("section");
 		card.setAttribute("id", `poi-${ind++}`)
 		card.classList.add("card");
@@ -21,9 +30,7 @@ async function getPOIs() {
 		const figure = document.createElement("figure");
 		const photo = document.createElement("img");
 		photo.setAttribute("alt", poi.name);
-		photo.setAttribute("loading", first ? "eager" : "lazy");
-		if(first)
-			first = false;
+		photo.setAttribute("loading", startsInView ? "eager" : "lazy");
 		photo.setAttribute("width", "300");
 		photo.setAttribute("height", "200");
 		photo.setAttribute("src", `images/${poi.image}`);
@@ -80,7 +87,7 @@ async function getPOIs() {
 		});
 		card.append(learnMoreBtn);
 
-		cardsWrapper.append(card);
+		placeholder.replaceWith(card);
 	});
 }
 
