@@ -7,10 +7,10 @@ main {
 	display: grid;
 	grid-template-areas:
 		"a"
+		"b"
 		"c"
 		"e"
 		"g"
-		"b"
 		"d"
 		"f"
 		"h";

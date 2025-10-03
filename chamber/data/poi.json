@@ -1,16 +1,10 @@
 {
   "points_of_interest": [
     {
-      "name": "Skyline Promenade",
-      "address": "100 Central Avenue, Timbuktu, TB 90001",
-      "description": "A scenic pedestrian walkway lined with public art, fountains, and cafes, offering sweeping views of the city skyline.",
-      "image": "poi_skyline_promenade.webp"
-    },
-    {
-      "name": "Riverfront Park",
-      "address": "220 Riverside Drive, Timbuktu, TB 90002",
-      "description": "This sprawling park features bike trails, a boating dock, and outdoor amphitheater hosting concerts and festivals year-round.",
-      "image": "poi_riverfront_park.webp"
+      "name": "Summit Tower",
+      "address": "500 Highpoint Boulevard, Timbuktu, TB 90005",
+      "description": "The tallest building in Timbuktu, complete with an observation deck and rooftop restaurant offering panoramic city views.",
+      "image": "poi_summit_tower.webp"
     },
     {
       "name": "Innovation Hub Museum",
@@ -19,34 +13,40 @@
       "image": "poi_innovation_hub.webp"
     },
     {
-      "name": "Old Market Square",
-      "address": "15 Heritage Street, Timbuktu, TB 90004",
-      "description": "A restored historic district featuring cobblestone streets, artisan shops, and weekly farmer’s markets.",
-      "image": "poi_old_market.webp"
-    },
-    {
-      "name": "Summit Tower",
-      "address": "500 Highpoint Boulevard, Timbuktu, TB 90005",
-      "description": "The tallest building in Timbuktu, complete with an observation deck and rooftop restaurant offering panoramic city views.",
-      "image": "poi_summit_tower.webp"
-    },
-    {
-      "name": "Greenwood Botanical Gardens",
-      "address": "860 Garden Lane, Timbuktu, TB 90006",
-      "description": "A lush 50-acre garden with themed landscapes, seasonal flower festivals, and a butterfly conservatory.",
-      "image": "poi_botanical_gardens.webp"
-    },
-    {
       "name": "City Arts Pavilion",
       "address": "310 Gallery Row, Timbuktu, TB 90007",
       "description": "A cultural hub showcasing rotating art exhibitions, live performances, and community art workshops.",
       "image": "poi_arts_pavilion.webp"
     },
     {
+      "name": "Riverfront Park",
+      "address": "220 Riverside Drive, Timbuktu, TB 90002",
+      "description": "This sprawling park features bike trails, a boating dock, and outdoor amphitheater hosting concerts and festivals year-round.",
+      "image": "poi_riverfront_park.webp"
+    },
+    {
       "name": "Metro Stadium",
       "address": "777 Victory Way, Timbuktu, TB 90008",
       "description": "Home to local sports teams and host to large concerts and events, this modern stadium seats over 40,000 fans.",
       "image": "poi_metro_stadium.webp"
+    },
+    {
+      "name": "Skyline Promenade",
+      "address": "100 Central Avenue, Timbuktu, TB 90001",
+      "description": "A scenic pedestrian walkway lined with public art, fountains, and cafes, offering sweeping views of the city skyline.",
+      "image": "poi_skyline_promenade.webp"
+    },
+    {
+      "name": "Old Market Square",
+      "address": "15 Heritage Street, Timbuktu, TB 90004",
+      "description": "A restored historic district featuring cobblestone streets, artisan shops, and weekly farmer’s markets.",
+      "image": "poi_old_market.webp"
+    },
+    {
+      "name": "Greenwood Botanical Gardens",
+      "address": "860 Garden Lane, Timbuktu, TB 90006",
+      "description": "A lush 50-acre garden with themed landscapes, seasonal flower festivals, and a butterfly conservatory.",
+      "image": "poi_botanical_gardens.webp"
     }
   ]
 }
