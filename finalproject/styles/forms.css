@@ -1,0 +1,65 @@
+form {
+	display: block;
+	margin: 1rem 0;
+	background-color: var(--secondary-background);
+	color: var(--secondary-foreground);
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+}
+
+fieldset {
+	border: var(--secondary-border);
+	padding: 1rem;
+	margin-bottom: 1rem;
+}
+
+legend {
+	padding: 0 0.5rem;
+}
+
+label {
+	display: block;
+	padding: 0.5rem 0;
+}
+
+label:has([type="radio"]) {
+	padding: 0.25rem 0;
+	cursor: pointer;
+}
+
+input[type="text"], input[type="email"] {
+	border: none;
+	display: block;
+	padding: 0.5rem;
+	border-radius: 6px;
+	width: 100%;
+	max-width: 400px;
+	appearance: unset;
+	min-height: 44px;
+	cursor: text;
+	font-size: 1rem;
+	margin-top: 0.125rem;
+}
+
+input:not([type="radio"]):required {
+	border-left: solid 1rem red;
+}
+input:not([type="radio"]):required:valid {
+	border-left: solid 1rem green;
+}
+.required-mark::after {
+	content: "*";
+	color: #FF6060;
+}
+
+input[type="submit"] {
+	margin: 0 0.5rem 1rem;
+	padding: 0.5em;
+	font-size: 1.25rem;
+	appearance: unset;
+	border: none;
+	border-radius: 6px;
+	background-color: var(--tertiary-background);
+	color: var(--tertiary-foreground);
+	font-weight: bold;
+}

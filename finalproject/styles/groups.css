@@ -1,0 +1,157 @@
+header {
+	position: relative;
+	z-index: 1;
+	box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.5);
+}
+main {
+	padding-top: 10px;
+	height: calc(100vh - var(--footer-size) - 69px);
+	overflow-y: auto;
+}
+main > div {
+	max-width: min(60rem, calc(100vw - 2rem));
+	margin: auto;
+}
+footer {
+	box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+#heading {
+	display: flex;
+	gap: 2rem;
+	justify-content: space-between;
+}
+
+main a, main button {
+	display: block;
+	width: fit-content;
+	text-decoration: none;
+	background-color: var(--secondary-background);
+	color: var(--secondary-foreground);
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	font-size: 14pt;
+	cursor: pointer;
+	font-weight: bold;
+	border: none;
+}
+
+#create-group {
+	margin: 1rem;
+	padding: 1.25rem;
+	text-align: center;
+}
+
+.group-card {
+	display: flex;
+	gap: 1rem;
+	justify-content: space-between;
+	margin: 1rem;
+	background-color: var(--secondary-background);
+	color: var(--secondary-foreground);
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+}
+.group-card p {
+	margin: 0.25rem 0;
+}
+.player-count {
+	text-align: center;
+}
+.group-card button {
+	background-color: var(--tertiary-background);
+	color: var(--tertiary-foreground);
+	margin: 0.5rem 0;
+	white-space: nowrap;
+}
+
+dialog {
+	border: none;
+	background-color: unset;
+	box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.5);
+	border-radius: 0.5rem;
+	padding: 0;
+	width: min(60rem, calc(100vw - 2rem));
+	background-color: var(--secondary-background);
+	color: var(--secondary-foreground);
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+}
+dialog > div {
+	display: grid;
+	grid-template-columns: 1fr 44px;
+}
+.close-modal {
+	background: none;
+	border: none;
+	color: var(--secondary-foreground);
+	cursor: pointer;
+	font-size: 2rem;
+	padding: 0;
+}
+dialog::backdrop {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+fieldset {
+	border: var(--secondary-border);
+	padding: 1rem;
+	margin-bottom: 1rem;
+}
+
+legend {
+	padding: 0 0.5rem;
+}
+
+label {
+	display: block;
+	padding: 0.5rem 0;
+}
+
+label:has([type="radio"]) {
+	padding: 0.25rem 0;
+	cursor: pointer;
+}
+
+input[type="text"], input[type="email"] {
+	border: none;
+	display: block;
+	padding: 0.5rem;
+	border-radius: 6px;
+	width: 100%;
+	max-width: 400px;
+	appearance: unset;
+	min-height: 44px;
+	cursor: text;
+	font-size: 1rem;
+	margin-top: 0.125rem;
+}
+
+input:not([type="radio"]):required {
+	border-left: solid 1rem red;
+}
+input:not([type="radio"]):required:valid {
+	border-left: solid 1rem green;
+}
+.required-mark::after {
+	content: "*";
+	color: #FF6060;
+}
+
+input[type="submit"] {
+	margin: 0 0.5rem 1rem;
+	padding: 0.5em;
+	font-size: 1.25rem;
+	appearance: unset;
+	border: none;
+	border-radius: 6px;
+	background-color: var(--tertiary-background);
+	color: var(--tertiary-foreground);
+	font-weight: bold;
+}
+
+@media screen and (min-aspect-ratio: 1/1) and (max-width: 700px) {
+	main {
+		height: 100vh;
+	}
+}

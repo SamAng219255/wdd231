@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" type="text/css" href="styles/theme.css">
+	<link rel="stylesheet" type="text/css" href="styles/groups.css">
+	<title>Group Sign Up — Mordan's Tools</title>
+	<meta name="description" content="name: Mordan's Tools, system: Pathfinder / 1st Edition / 1E / 1st Ed, content: [group sign up]">
+	<meta name="author" content="Sam Anguiano">
+	<meta property="og:title" content="Group Sign Up — Mordan's Tools">
+	<meta property="og:description" content="Come see the groups we have posted or post your own!">
+	<meta property="og:url" content="https://samang219255.github.io/wdd231/project/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:image" content="https://samang219255.github.io/wdd231/project/images/fb_banner.jpg">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Mordan's Tools">
+	<meta name="twitter:url" content="https://samang219255.github.io/wdd231/project/">
+	<meta name="twitter:title" content="Group Sign Up — Mordan's Tools">
+	<meta name="twitter:description" content="Come see the groups we have posted or post your own!">
+	<meta name="twitter:card" content="summary">
+	<script type="module" src="../scripts/getdates.js"></script>
+	<script type="module" src="scripts/menu.js"></script>
+	<script type="module" src="scripts/groups.js"></script>
+</head>
+<body>
+	<header>
+		<span id="site-name">Mordan's Tools</span>
+		<button id="nav-button" aria-label="Navigation Menu, Closed"></button>
+		<nav>
+			<a href="./">Home</a>
+			<a href="./groups.html" class="current">Group Sign Up</a>
+			<a href="./dice.html">Dice Roller</a>
+		</nav>
+	</header>
+	<main><div>
+		<h1>Group Sign Up</h1>
+		<section id="heading">
+			<div>
+				<h2>Available Play Groups</h2>
+				<p>Choose a group below and click to join that group or click to create a new group.</p>
+			</div>
+			<div>
+				<button id="create-group">Post A&nbsp;New Group</button>
+			</div>
+		</section>
+		<div id="group-list">
+			
+		</div>
+	</div></main>
+	<footer>
+		<p>&copy;<span id="currentyear"></span> ⚛ Paul "Sam" Anguiano ⚛ Washington, USA</p>
+		<p id="lastModified"></p>
+	</footer>
+	<dialog id="join-dialog">
+		<div>
+			<h2>Join Group</h2>
+			<button class="close-modal"><img src="images/x-charcoal.svg" width="44" height="44" alt="Close Form"></button>	
+		</div>
+		<form action="join-thanks.html" method="GET">
+			<fieldset>
+				<legend>Your Information</legend>
+				<label>
+					Username<span class="required-mark"></span>
+					<input type="text" name="username" autocomplete="username" required>
+				</label>
+				<label>
+					Email<span class="required-mark"></span>
+					<input type="email" name="email" autocomplete="email" required>
+				</label>
+			</fieldset>
+			<input type="hidden" name="group-id" id="group-id">
+			<input type="hidden" name="group-name" id="group-name">
+			<input type="submit" id="submit" value="Join Group">
+		</form>
+	</dialog>
+	<dialog id="new-dialog">
+		<div>
+			<h2>Create Group</h2>
+			<button class="close-modal"><img src="images/x-charcoal.svg" width="44" height="44" alt="Close Form"></button>	
+		</div>
+		<form action="new-thanks.html" method="GET">
+			<fieldset>
+				<legend>Your Information</legend>
+				<label>
+					Username<span class="required-mark"></span>
+					<input type="text" name="username" autocomplete="username" required>
+				</label>
+				<label>
+					Email<span class="required-mark"></span>
+					<input type="email" name="email" autocomplete="email" required>
+				</label>
+			</fieldset>
+			<fieldset>
+				<legend>Group Information</legend>
+				<label>
+					Group Name<span class="required-mark"></span>
+					<input type="text" name="group-name" required>
+				</label>
+				<label>
+					Campaign<span class="required-mark"></span>
+					<input type="text" name="campaign" required>
+				</label>
+				<div>
+					System<span class="required-mark"></span>
+					<label><input type="radio" name="system" value="Pathfinder 1E" required> Pathfinder 1E</label>
+					<label><input type="radio" name="system" value="Pathfinder 2E" required> Pathfinder 2E</label>
+					<label><input type="radio" name="system" value="Starfinder" required> Starfinder</label>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Meeting Information</legend>
+				<label>
+					Meeting Time<span class="required-mark"></span>
+					<input type="text" name="meeting-time" required>
+				</label>
+				<div>
+					Meeting Type<span class="required-mark"></span>
+					<label><input type="radio" name="meeting-type" value="in-person" required> in-person</label>
+					<label><input type="radio" name="meeting-type" value="online" required> online</label>
+				</div>
+				<label>
+					Meeting Place<span class="required-mark"></span>
+					<input type="text" name="meeting-place" required>
+				</label>
+			</fieldset>
+			<input type="submit" value="Create Group">
+		</form>
+	</dialog>
+</body>
+</html>

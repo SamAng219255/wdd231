@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" type="text/css" href="styles/theme.css">
+	<link rel="stylesheet" type="text/css" href="styles/dice.css">
+	<title>Dice Roller — Mordan's Tools</title>
+	<meta name="description" content="name: Mordan's Tools, system: Pathfinder / 1st Edition / 1E / 1st Ed, content: [dice roller]">
+	<meta name="author" content="Sam Anguiano">
+	<meta property="og:title" content="Dice Roller — Mordan's Tools">
+	<meta property="og:description" content="Our dice roller let's you build whatever combination of dice you want then roll them all together. You can also save your favorites so that you can have your favorite spells and weapons ready to roll!">
+	<meta property="og:url" content="https://samang219255.github.io/wdd231/project/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:image" content="https://samang219255.github.io/wdd231/project/images/fb_banner.jpg">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Mordan's Tools">
+	<meta name="twitter:url" content="https://samang219255.github.io/wdd231/project/">
+	<meta name="twitter:title" content="Dice Roller — Mordan's Tools">
+	<meta name="twitter:description" content="Our dice roller let's you build whatever combination of dice you want then roll them all together. You can also save your favorites so that you can have your favorite spells and weapons ready to roll!">
+	<meta name="twitter:card" content="summary">
+	<script type="module" src="../scripts/getdates.js"></script>
+	<script type="module" src="scripts/menu.js"></script>
+	<script type="module" src="scripts/dice-minified.js"></script>
+</head>
+<body>
+	<header>
+		<span id="site-name">Mordan's Tools</span>
+		<button id="nav-button" aria-label="Navigation Menu, Closed"></button>
+		<nav>
+			<a href="./">Home</a>
+			<a href="./groups.html">Group Sign Up</a>
+			<a href="./dice.html" class="current">Dice Roller</a>
+		</nav>
+	</header>
+	<main>
+		<h1>Dice Roller</h1>
+		<section id="dice-builder">
+			<h2>Dice Builder</h2>
+			<p id="current-dice-display"></p>
+			<div id="roll-btns">
+				<button id="roll-current">
+					<img loading="lazy" src="images/dice-charcoal.svg" alt="dice icon" height="18" width="18">
+					Roll
+				</button>
+				<button id="max-current">
+					<img loading="lazy" src="images/dice-charcoal.svg" alt="dice icon" height="18" width="18">
+					Max Roll
+				</button>
+				<button id="min-current">
+					<img loading="lazy" src="images/dice-charcoal.svg" alt="dice icon" height="18" width="18">
+					Min Roll
+				</button>
+			</div>
+			<button id="favorite">
+				<img loading="lazy" src="images/star-empty-charcoal.svg" alt="empty star icon" height="18" width="18">
+				Add to Favorites
+			</button>
+			<p id="latest-dice-result"></p>
+			<button id="show-dice-info">
+				<img loading="lazy" src="images/plus-charcoal.svg" alt="plus icon" height="18" width="18">
+				Show Dice Settings
+			</button>
+			<div id="dice-info" class="hide">
+				<label>
+					Modifier:
+					<input type="number" id="dice-modifier" placeholder="+0">
+				</label>
+				<div id="dice-groups"></div>
+				<button id="add-dice-group">
+					<img loading="lazy" src="images/plus-charcoal.svg" alt="plus icon" height="18" width="18">
+					Add Dice Group
+				</button>
+			</div>
+		</section>
+		<section>
+			<h2>Favorites</h2>
+			<button id="show-favorites">
+				<img loading="lazy" src="images/plus-charcoal.svg" alt="plus icon" height="18" width="18">
+				Show Favorites
+			</button>
+			<div id="favorites" class="hide">
+				<p>You have no favorites yet! Click "Add to Favorites" to save dice here to use later.</p>
+			</div>
+		</section>
+		<section>
+			<h2>Roll History</h2>
+			<button id="show-history">
+				<img loading="lazy" src="images/plus-charcoal.svg" alt="plus icon" height="18" width="18">
+				Show History
+			</button>
+			<div id="history" class="hide">
+				<p>You have no history yet! The results of the last 100 rolls you make will appear here.</p>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>&copy;<span id="currentyear"></span> ⚛ Paul "Sam" Anguiano ⚛ Washington, USA</p>
+		<p id="lastModified"></p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,9 @@
+Subject:
+	Pathfinder (A table-top roleplaying game that branched off of Dungeons and Dragons)
+Description:
+	The site will have 3 pages.
+	The main page will contain a description of the game and list of resources.
+	There will also be a page to post groups to play together or to join those groups. (This may be divided into multiple pages to accommodate the forms and list.)
+	The last page will include a digital dice roller for rolling groups of dice with static modifiers. Previous rolls, with their results, as well as favorites and the current settings, will be stored in local storage.
+Reason:
+	I play Pathfinder often and have found that these are commonly useful assets.
