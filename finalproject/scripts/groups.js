@@ -133,18 +133,13 @@ function updateGroups() {
 async function getGroups() {
 	try {
 		const response = await fetch(groupDataLocation);
-		try {
-			const data = await response.json();
+		const data = await response.json();
 
-			groups = data.groups;
-			updateGroups();
-		}
-		catch(e) {
-			throw Error(`Data Parse Error\n${await response.text()}`);
-		}
+		groups = data.groups;
+		updateGroups();
 	}
 	catch(e) {
-		console.error(`Fetch Error: ${e}`);
+		console.error("Error fetching data:", e);
 	}
 }
 
