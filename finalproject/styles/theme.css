@@ -23,7 +23,7 @@
 	--tertiary-border: var(--tertiary-foreground) solid 1px;
 	--paper-border: var(--paper-foreground) solid 2px;
 
-	--footer-size: 6rem;
+	--footer-size: 8rem;
 }
 
 * {
@@ -59,7 +59,7 @@ footer {
 	background-color: var(--secondary-background);
 	color: var(--secondary-foreground);
 	text-align: center;
-	padding: 1rem;
+	padding: 0 1rem;
 	height: var(--footer-size);
 	width: 100%;
 	position: absolute;
@@ -130,6 +130,11 @@ nav a:active {
 	}
 	#nav-button.open::before {
 		content: "☓";
+	}
+}
+@media screen and (min-width: 460px) {
+	:root {
+		--footer-size: 6rem;
 	}
 }
 @media screen and (max-width: 400px) {
